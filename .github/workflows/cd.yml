@@ -3,7 +3,7 @@ name: Continuous Deployment
 on: # Déclenchement du code uniquement sur réalisation d'un push sur une branche de livraison
     push:
       branches:
-        - 'release/0.0.1'
+        - 'release/**'
     workflow_dispatch:
 
 jobs:
