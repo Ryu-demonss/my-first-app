@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y dotnet-sdk-9.0 ca-certificates
 WORKDIR /source
 COPY . .
 # Publication de l'app dotnet
-RUN dotnet publish -c Release -o /app
+RUN dotnet publish my-first-app.csproj -c Release -o /app
 FROM ubuntu:24.10 AS prod
 # Récupération des DLL de l'application
 WORKDIR /app
