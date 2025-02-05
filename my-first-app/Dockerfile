@@ -20,5 +20,3 @@ COPY --from=builder /app ./
 RUN apt-get update && apt-get install -y dotnet-sdk-9.0
 # Entrypoint d'exécution de l'application
 ENTRYPOINT ["dotnet", "my-first-app.dll"]
-
-EXPOSE 5001
