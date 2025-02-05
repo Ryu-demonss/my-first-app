@@ -2,7 +2,7 @@
 FROM ubuntu:24.10 AS builder
 # Installation du SDK dotnet 9
 WORKDIR /app
-RUN apt-get update && apt-get install -y dotnet-sdk-9.0 ca-certificates
+RUN apt-get update && apt-get install -y dotnet-sdk-9.0 ca-certificates net-tools curl
 # Ajouter le code source de l'application
 WORKDIR /source
 COPY . .
